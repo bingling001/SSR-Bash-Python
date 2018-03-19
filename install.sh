@@ -70,13 +70,14 @@ bash initcfg.sh
 cd $workdir
 export LIBSODIUM_VER=1.0.11
 wget https://github.com/jedisct1/libsodium/releases/download/1.0.11/libsodium-$LIBSODIUM_VER.tar.gz
-tar xvf libsodium-$LIBSODIUM_VER.tar.gz
-pushd libsodium-$LIBSODIUM_VER
+https://github.com/bingling001/libsodium/archive/master.zip
+unzip libsodium-$libsodium-master.zip
+pushd libsodium-$libsodium-master
 ./configure --prefix=/usr && make
 make install
 popd
 ldconfig
-cd $workdir && rm -rf libsodium-$LIBSODIUM_VER.tar.gz libsodium-$LIBSODIUM_VER
+cd $workdir && rm -rf libsodium-$libsodium-master.zip libsodium-$libsodium-master
 
 #Start when boot
 if [[ ${OS} == Ubuntu || ${OS} == Debian ]];then
